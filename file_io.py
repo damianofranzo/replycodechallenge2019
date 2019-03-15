@@ -1,5 +1,7 @@
 import customer
 import cell
+import path
+
 def readFile(name):
     with open(name) as fd:
         N,M,C,R=fd.readline().split()
@@ -21,7 +23,13 @@ def readFile(name):
 
     return customers,map
 
-def writeFile(name):
+def writeFile(name,path_list):
+    with open(name,'w') as fd:
+       string=''
+       for i in range(len(path_list)):
+           x_1,y_1,x_2,y_2,p=path_list[i].split()
+           string= string + str(x_1) + " " + str(y_1) + " " + str(x_2) + " " + str(y_2) + " " + p
+           fd.write(string + " \n")
     return
 
 

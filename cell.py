@@ -4,7 +4,7 @@ class Cell():
         self.character=character
         if character == '#':
             self.walkable=False
-            self.cost=-1
+            self.cost=float('inf')
         elif character== '~':
             self.walkable=True
             self.cost=800
