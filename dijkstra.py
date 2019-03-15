@@ -73,12 +73,12 @@ def explore(heatmap):
                     heatmap.map[new_row][new_col].col_dad=cand.col
 
 
-    for (row,col) in customer_coordinates:
-        heatmap.map[row][col].prize_up_to= -float('inf')
+
     for i in range(len(heatmap.map)):
         for j in range(len(heatmap.map[0])):
             if heatmap.map[i][j] is None:
                 heatmap.map[i][j]=candidate.Candidate(True, i, j, -1, -1,heatmap.motw[i][j].cost, -float('inf'))
 
 
-
+    for (row,col) in customer_coordinates:
+        heatmap.map[row][col].prize_up_to= -float('inf')
