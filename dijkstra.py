@@ -9,10 +9,10 @@ def djikstra(customers,motw):
         heatmaps.append(heatmap)
 
         explore(heatmap)
-    for i in range (len(heatmap.map)):
-        for el in heatmap.map[i]:
-            print (el.prize_up_to,)
-        print()
+  #  for i in range (len(heatmap.map)):
+   #     for el in heatmap.map[i]:
+    #        print (el.prize_up_to,)
+     #   print()
     return heatmaps
 
 
