@@ -1,7 +1,7 @@
 class Customer():
 
-    def __init__(self,x,y,reward):
-        self.row=y
-        self.col=x
-        self.reward=reward
+    def __init__(self,row ,col ,reward):
+        self.row = int(row)
+        self.col = int(col)
+        self.reward = int(reward)
 
