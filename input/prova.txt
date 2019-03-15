@@ -1,0 +1,13 @@
+6 6  1 1
+3 3 1000
+TTTT##
+TTT###
+TTTTTT
+###TTT
+TT#TTT
+TT#TTT
+
+2 2 1 1
+1 1 1000
+T#
+TT
