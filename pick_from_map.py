@@ -43,16 +43,16 @@ def pick_from_map(heatmaps, param):
                 # print("Before", perc_str)
                 # DOWN
                 if prec_row == row_cur + 1:
-                    perc_str += "D"
+                    perc_str += "U"
                 # Left
                 elif prec_row == row_cur - 1:
-                    perc_str += "U"
+                    perc_str += "D"
                 # Up
                 elif prec_col == col_cur + 1:
-                    perc_str += "R"
+                    perc_str += "L"
                 # Right
                 elif prec_col == col_cur - 1:
-                    perc_str += "L"
+                    perc_str += "R"
                 else:
                     print("WTF")
                 # print("After", perc_str)

@@ -48,7 +48,11 @@ def exec():
     cust1, map1, param1 = readFile('./input/1_victoria_lake.txt')
     cust4, map4, param4 = readFile('./input/4_manhattan.txt')
     cust5, map5, param5 = readFile('./input/5_oceania.txt')
-
+    """
+    heatmaps3 = djikstra(cust3, map3)
+    final_paths3 = pick_from_map(heatmaps3, param3)
+    write_file_paths("./output/3.txt", final_paths3)
+    """
     heatmaps1 = djikstra(cust1, map1)
     final_paths1 = pick_from_map(heatmaps1, param1)
     write_file_paths("./output/1.txt", final_paths1)
