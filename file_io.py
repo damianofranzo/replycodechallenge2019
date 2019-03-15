@@ -9,8 +9,8 @@ def readFile(name):
         customers=[]
         map=[]
         for i in range(C):
-            col,row,reward=fd.readline().split()
-            X,Y,reward=int(row),int(col),int(reward)
+            col, row, reward=fd.readline().split()
+            row, col, reward = int(row),int(col),int(reward)
             customers.append(customer.Customer(row,col,reward))
         for i in range(M):
             l=list(fd.readline())
@@ -40,7 +40,10 @@ def writeFile(file_name, coor, path, is_string=False):
 
 def write_file_paths(file_name, path_list):
     with open(file_name,'w') as fd:
-       for p in path_list:
+       for p in path_list[:-1]:
            x, y = p.office_x, p.office_y
-           out = str(x) + " " + str(y) + p.path + "\n"
+           out = str(x) + " " + str(y) + " " + p.path + "\n"
            fd.write(out)
+       x, y = path_list[-1].office_x,  path_list[-1].office_y
+       out = str(x) + " " + str(y) + " " + path_list[-1].path
+       fd.write(out)
