@@ -9,9 +9,9 @@ def readFile(name):
         customers=[]
         map=[]
         for i in range(C):
-            X,Y,reward=fd.readline().split()
-            X,Y,reward=int(X),int(Y),int(reward)
-            customers.append(customer.Customer(X,Y,reward))
+            col,row,reward=fd.readline().split()
+            X,Y,reward=int(row),int(col),int(reward)
+            customers.append(customer.Customer(row,col,reward))
         for i in range(M):
             l=list(fd.readline())
             map_list=[]
