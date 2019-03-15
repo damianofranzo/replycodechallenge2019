@@ -19,17 +19,28 @@ def readFile(name):
                 c=cell.Cell(l[j])
                 map_list.append(c)
             map.append(map_list)
+    param = {}
+    param['N'] = N
+    param['M'] = M
+    param['C'] = C
+    param['R'] = R
 
 
-    return customers,map
+    return customers,map, param
 
-def writeFile(name,path_list):
-    with open(name,'w') as fd:
+def writeFile(file_name, coor, path, is_string=False):
+    with open(file_name,'w') as fd:
        string=''
-       for i in range(len(path_list)):
-           x_1,y_1,x_2,y_2,p=path_list[i].split()
+       for i in range(len(path)):
+           x_1,y_1,x_2,y_2,p=path[i].split()
            string= string + str(x_1) + " " + str(y_1) + " " + str(x_2) + " " + str(y_2) + " " + p
            fd.write(string + " \n")
     return
 
 
+def write_file_paths(file_name, path_list):
+    with open(file_name,'w') as fd:
+       for p in path_list:
+           x, y = p.office_x, p.office_y
+           out = str(x) + " " + str(y) + p.path + "\n"
+           fd.write(out)
