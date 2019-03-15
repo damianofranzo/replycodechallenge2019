@@ -41,7 +41,6 @@ def simple_sol(cust, mapp, param, out_name):
 
 
 def exec():
-    """
     cust1, map1, param1 = readFile('./input/1_victoria_lake.txt')
     cust2, map2, param2 = readFile('./input/2_himalayas.txt')
     cust3, map3, param3 = readFile('./input/3_budapest.txt')
@@ -57,11 +56,13 @@ def exec():
     #simple_sol(cust3, map3, param3, "./output/3.txt")
     #simple_sol(cust4, map4, param4, "./output/4.txt")
     #simple_sol(cust5, map5, param5, "./output/5.txt")
+
     """
     cust1, map1, param1 = readFile('./input/prova.txt')
     heatmaps1 = djikstra(cust1, map1)
     final_paths1 = pick_from_map(heatmaps1, param1)
     write_file_paths("./output/prova.txt", final_paths1)
+    """
 
 
 if __name__=="__main__":
