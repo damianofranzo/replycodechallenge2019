@@ -15,7 +15,7 @@ def readFile(name):
         for i in range(M):
             l=list(fd.readline())
             map_list=[]
-            for j in range(len(l)):
+            for j in range(N):
                 c=cell.Cell(l[j])
                 map_list.append(c)
             map.append(map_list)
