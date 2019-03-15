@@ -37,7 +37,7 @@ def pick_from_map(heatmaps, param):
            # if row_cur == hm.customer.row or col_cur == hm.customer.col:
               #  print("They are equal!")
                # print(row_cur, hm.customer.row, col_cur, hm.customer.col)
-            while row_cur != hm.customer.row and col_cur != hm.customer.col:
+            while row_cur != hm.customer.row or col_cur != hm.customer.col:
                 prec_row, prec_col = row_cur, col_cur
                 row_cur, col_cur = hm.map[row_cur][col_cur].row_dad, hm.map[row_cur][col_cur].col_dad
                 # print("Before", perc_str)
