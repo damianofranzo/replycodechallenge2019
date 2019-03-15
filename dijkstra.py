@@ -9,10 +9,10 @@ def djikstra(customers,motw):
         heatmaps.append(heatmap)
 
         explore(heatmap)
-  #  for i in range (len(heatmap.map)):
-   #     for el in heatmap.map[i]:
-    #        print (el.prize_up_to,)
-     #   print()
+    #for i in range (len(heatmap.map)):
+     #   for el in heatmap.map[i]:
+      #      print (el.prize_up_to,)
+       # print()
     return heatmaps
 
 
@@ -34,7 +34,7 @@ def explore(heatmap):
             if i == 0 :
                 new_row=cand.row - 1
                 new_col=cand.col
-                if new_row <= 0 :
+                if new_row < 0 :
                     continue
 
             if i == 1:
@@ -45,7 +45,7 @@ def explore(heatmap):
             if i == 2:
                 new_row = cand.row
                 new_col = cand.col - 1
-                if new_col <= 0 :
+                if new_col < 0 :
                     continue
 
             if i == 3:
